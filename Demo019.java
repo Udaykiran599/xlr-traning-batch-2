@@ -1,7 +1,13 @@
+import java.util.Scanner;
+
 public class Demo019 {
     public static void main(String[] args) {
-        // Example input: number of minutes
-        long minutes = 5256000;
+        // Create a Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter the number of minutes
+        System.out.print("Enter the number of minutes: ");
+        long minutes = scanner.nextLong();
 
         // Constants
         int minutesInHour = 60;
@@ -15,5 +21,8 @@ public class Demo019 {
 
         // Output the result
         System.out.println(minutes + " minutes is approximately " + years + " years and " + remainingDays + " days.");
+
+        // Close the scanner
+        scanner.close();
     }
 }
